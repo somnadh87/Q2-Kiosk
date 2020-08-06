@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap';
 import headerlogo from '../../images/firstpasslogo.svg';
 import moment from 'moment';
 import exit from '../../images/next-button.svg';
+import close from '../../images/close.svg';
 import Keyboard from "react-simple-keyboard";
 import happy from '../../images/happy.svg';
 import neutral from '../../images/neutral.svg';
@@ -32,7 +33,7 @@ class Kiosk1 extends Component<any, any> {
             weekday: moment().format('dddd'),
             time: moment().format('hh:mm A'),
             tabId: 1,
-            layoutName: "shift",
+            layoutName: "small",
             keyboardopen: false,
             mrn: "",
             tokenNumber: "",
@@ -55,7 +56,7 @@ class Kiosk1 extends Component<any, any> {
         this.setState({ tabId: 4 })
         setTimeout(() => {
             this.setState({ tabId: 6 })
-        }, 2000)
+        }, 10000)
     }
 
     selectMrn = () => {
@@ -131,18 +132,16 @@ class Kiosk1 extends Component<any, any> {
             '* 0 # {space}'
         ],
         'shift': [
-            '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
-            '{tab} Q W E R T Y U I O P {return}',
+            '{tab} Q W E R T Y U I O P {bksp}',
             '{locks} A S D F G H J K L {enter}',
-            '{shift} Z X C V B N M , {shift}',
-            '{s} . {space} ? {s}'
+            '{shift} Z X C V B N M {shift}',
+            '{s} . {space} , {s}'
         ],
         'small': [
-            '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
-            '{tab} q w e r t y u i o p {return}',
+            '{tab} q w e r t y u i o p {bksp}',
             '{locks} a s d f g h j k l {enter}',
-            '{shift} z x c v b n m , {shift}',
-            '{s} . {space} ? {s}'
+            '{shift} z x c v b n m {shift}',
+            '{s} . {space} , {s}'
         ],
     }
 
@@ -206,14 +205,14 @@ class Kiosk1 extends Component<any, any> {
 
                     {this.state.tabId === 1 &&
                         <div className="kiosk-content bgImage">
-                            <Row className="content-sec w100">
+                            <Row className="content-sec w100 pb-2">
                                 <Col sm="6" className="welcometext">
                                     <div>
                                         <h2>Welcome,</h2>
                                         <p>Please select the appropriate language</p>
                                     </div>
                                 </Col>
-                                <Col sm="6" className="align-center">
+                                <Col sm="6" className="align-center pad-lft30">
                                     <button className="languagebtn" onClick={this.selectMenu}>ENG</button>
                                     <button className="languagebtn" onClick={this.selectMenu}>عربى</button>
                                 </Col>
@@ -236,7 +235,7 @@ class Kiosk1 extends Component<any, any> {
                                         <div className="menuitem-title">Appointments</div>
                                         <img src={appointment} alt="" width="55%" />
                                     </div>
-                                    <div className="kiosk-menuItem" onClick={this.appointments}>
+                                    <div className="kiosk-menuItem" onClick={this.error}>
                                         <div className="menuitem-title">Pharmacy</div>
                                         <img src={pharmacy} alt="" width="65%" style={{ right: "-23px", top: "-15px" }} /></div>
                                     <div className="kiosk-menuItem" onClick={this.appointments}>
@@ -314,7 +313,7 @@ class Kiosk1 extends Component<any, any> {
                                     buttonTheme={[
                                         {
                                             class: "hg-grey",
-                                            buttons: "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M q w e r t y u i o p a s d f g h j k l z x c v b n m , : {space} 1 2 3 4 5 6 7 8 9 0"
+                                            buttons: "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M q w e r t y u i o p a s d f g h j k l z x c v b n m {space} 1 2 3 4 5 6 7 8 9 0"
                                         }
                                     ]}
                                 />
@@ -496,7 +495,7 @@ class Kiosk1 extends Component<any, any> {
 
                     {this.state.tabId === 7 &&
                         <div className="kiosk-content">
-                            <Row className="content-sec w80 text-center">
+                            <Row className="content-sec w70 text-center">
                                 <Col sm="6">
                                     <div className="tableCard">
                                         <table className="tableWidth">
@@ -521,6 +520,11 @@ class Kiosk1 extends Component<any, any> {
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Oncology Department</td>
+                                                                </tr>
+                                                                <tr style={{ fontWeight: "bold" }}>
+                                                                    <td>
+                                                                    مدينة الشيخ خليفة الطبية
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>وقت التعيين</td>
@@ -627,7 +631,7 @@ class Kiosk1 extends Component<any, any> {
                         <div className="kiosk-content">
                             <div className="errorMessage">
                                 <div className="close-button" onClick={this.exit}>
-                                    <i className="ti-close"></i>
+                                    <img src={close} alt="" width="28" />
                                 </div>
                                 <img src={errorimg} alt="" />
                                 <p>Something went wrong, please<br /> visit the registration desk</p>
@@ -644,8 +648,8 @@ class Kiosk1 extends Component<any, any> {
                             </Col>
                             {this.state.tabId !== 1 &&
                                 <Col sm="6" xs="6" className="text-right">
-                                    <img src={back} alt="" width="70" onClick={this.back} />
-                                    <img src={exit} alt="" width="70" onClick={this.exit} />
+                                    <img src={back} alt="" width="80" onClick={this.back} />
+                                    <img src={exit} alt="" width="80" onClick={this.exit} />
                                 </Col>
                             }
                         </Row>
