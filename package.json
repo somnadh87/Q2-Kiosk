@@ -1,0 +1,63 @@
+{
+  "name": "vertical",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "availity-reactstrap-validation": "^2.6.0",
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.17.0",
+    "bootstrap": "^4.4.1",
+    "create-react-class": "^15.6.3",
+    "i18next": "^19.4.0",
+    "i18next-browser-languagedetector": "^4.0.2",
+    "lodash.clonedeep": "^4.5.0",
+    "metismenujs": "^1.1.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-i18next": "^11.3.4",
+    "react-idle-timer": "^4.2.12",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.0",
+    "react-simple-keyboard": "^2.3.122",
+    "react-sound": "^1.2.0",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.6",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-encrypt": "^2.0.1",
+    "redux-saga": "^1.0.5",
+    "rxjs": "^6.5.5"
+  },
+  "scripts": {
+    "start": "SET PORT=5300 && react-scripts start --host 0.0.0.0",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.2"
+  }
+}

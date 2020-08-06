@@ -1,0 +1,22 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './scss/style.scss';
+
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: pink;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: pink;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: pink;
+  }
+
+  input::placeholder {
+    color: red;
+  }

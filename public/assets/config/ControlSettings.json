@@ -1,0 +1,816 @@
+{
+    "baseUrl": "http://202.65.159.118:8092/",
+    "components": [
+        {
+            "apiUrl": "",
+            "component": "Auth",
+            "methods": [
+                {
+                    "name": "authlogin",
+                    "type": "POST",
+                    "url": "auth/login"
+                },
+                {
+                    "name": "getMenu",
+                    "type": "GET",
+                    "url": "menu-new/{userid}/menus/{roleid}"
+                },
+                {
+                    "name": "logout",
+                    "type": "GET",
+                    "url": "auth/{userid}/logout"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Enterprise",
+            "methods": [
+                {
+                    "name": "getAllLanguages",
+                    "type": "GET",
+                    "url": "enterprise/{userid}/languages"
+                },
+                {
+                    "name": "getAllTimeZones",
+                    "type": "GET",
+                    "url": "enterprise/{userid}/time-zones"
+                },
+                {
+                    "name": "getEnterpriseInfo",
+                    "type": "GET",
+                    "url": "enterprise/{userid}/all"
+                },
+                {
+                    "name": "createEnterprise",
+                    "type": "POST",
+                    "url": "enterprise/{userid}/create"
+                },
+                {
+                    "name": "uploadAndValidate",
+                    "type": "POST",
+                    "url": "enterprise/{userid}/license/upload"
+                },
+                {
+                    "name": "uplaodLogoFile",
+                    "type": "POST",
+                    "url": "enterprise/{userid}/logo/upload"
+                },
+                {
+                    "name": "updateStatus",
+                    "type": "PUT",
+                    "url": "enterprise/{userid}/status-update/{epid}"
+                },
+                {
+                    "name": "updateEnterprise",
+                    "type": "PUT",
+                    "url": "enterprise/{userid}/update"
+                },
+                {
+                    "name": "getLicenseInfo",
+                    "type": "GET",
+                    "url": "enterprise/{userid}/license-info"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "User",
+            "methods": [
+                {
+                    "name": "getUsersByRoleId",
+                    "type": "GET",
+                    "url": "user/{userid}/all/{roleid}"
+                },
+                {
+                    "name": "getUserType",
+                    "type": "GET",
+                    "url": "user/{userid}/all/usertype"
+                },
+                {
+                    "name": "getDoctorsByRoleId",
+                    "type": "GET",
+                    "url": "user/{userid}/doctors/{locationId}"
+                },
+                {
+                    "name": "getMedicalServiceRetainDoctorsByRoleId",
+                    "type": "GET",
+                    "url": "user/{userid}/retain-doctors/{locationId}"
+                },
+                {
+                    "name": "createUser",
+                    "type": "POST",
+                    "url": "user/{userid}/create"
+                },
+                {
+                    "name": "updateUserStatus",
+                    "type": "PUT",
+                    "url": "user/{userid}/status-update/{activate-id}"
+                },
+                {
+                    "name": "updateUser",
+                    "type": "PUT",
+                    "url": "user/{userid}/update"
+                },
+                {
+                    "name": "updateUserProfile",
+                    "type": "PUT",
+                    "url": "user/{userid}/update-profile"
+                },
+                {
+                    "name": "updatePassword",
+                    "type": "PUT",
+                    "url": "user/{userid}/update-password"
+                },
+                {
+                    "name": "getAllDoctorsByServiceId",
+                    "type": "GET",
+                    "url": "user/{userid}/resources/{locationId}/{serviceId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Location",
+            "methods": [
+                {
+                    "name": "getAllLocationsByEntId",
+                    "type": "GET",
+                    "url": "location/{userid}/all/{epid}"
+                },
+                {
+                    "name": "createLocation",
+                    "type": "POST",
+                    "url": "location/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateLocation",
+                    "type": "PUT",
+                    "url": "location/{userid}/update/{epid}"
+                },
+                {
+                    "name": "deleteByLocationId",
+                    "type": "DELETE",
+                    "url": "location/{userid}/delete"
+                },
+                {
+                    "name": "validateLocationEngName",
+                    "type": "GET",
+                    "url": "location/{userid}/validate/{epid}/{locationNameEn}"
+                },
+                {
+                    "name": "validateLocationNameArbInDb",
+                    "type": "GET",
+                    "url": "location/{userid}/validateLocation/{locationNameAr}/{epid}"
+                },
+                {
+                    "name": "updateLocationStatus",
+                    "type": "PUT",
+                    "url": "location/{userid}/status-update/{activate-id}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Role",
+            "methods": [
+                {
+                    "name": "getDefaultRoles",
+                    "type": "GET",
+                    "url": "role/{userid}/roles/{rolecode}/all"
+                },
+                {
+                    "name": "createRole",
+                    "type": "POST",
+                    "url": "role/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateRole",
+                    "type": "PUT",
+                    "url": "role/{userid}/update/{epid}"
+                },
+                {
+                    "name": "getCustomRolesByEnterpriseId",
+                    "type": "GET",
+                    "url": "role/{userid}/custom-roles/{epid}/all"
+                },
+                {
+                    "name": "getPageswithDefaultPermissions",
+                    "type": "GET",
+                    "url": "role/{userid}/pages/{role-type}"
+                },
+                {
+                    "name": "getRoleTypes",
+                    "type": "GET",
+                    "url": "role/{userid}/role-types"
+                },
+                {
+                    "name": "getRolesByRoleCode",
+                    "type": "GET",
+                    "url": "role/{userid}/roles/{rolecode}/all"
+                },
+                {
+                    "name": "deleteByRoleId",
+                    "type": "DELETE",
+                    "url": "role/{userid}/delete/{roleId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Branch",
+            "methods": [
+                {
+                    "name": "getAllBrancheTypes",
+                    "type": "GET",
+                    "url": "branch/{userid}/allBranchTypes"
+                },
+                {
+                    "name": "getAllBranchesByLocId",
+                    "type": "GET",
+                    "url": "branch/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "createBranch",
+                    "type": "POST",
+                    "url": "branch/{userid}/create/{locationId}"
+                },
+                {
+                    "name": "updateBranch",
+                    "type": "PUT",
+                    "url": "branch/{userid}/update/{locationId}"
+                },
+                {
+                    "name": "deleteBranch",
+                    "type": "DELETE",
+                    "url": "branch/{userid}/delete/{branchId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Room",
+            "methods": [
+                {
+                    "name": "getAllRoomsByBranchId",
+                    "type": "GET",
+                    "url": "room/{userid}/all/{branchId}"
+                },
+                {
+                    "name": "createRoom",
+                    "type": "POST",
+                    "url": "room/{userid}/create/{branchId}"
+                },
+                {
+                    "name": "updateRoom",
+                    "type": "PUT",
+                    "url": "room/{userid}/update/{branchId}"
+                },
+                {
+                    "name": "deleteByRoomMasterId",
+                    "type": "DELETE",
+                    "url": "room/{userid}/deleteRoom/{roomMasterId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "RoomNo",
+            "methods": [
+                {
+                    "name": "getAllRoomNos",
+                    "type": "GET",
+                    "url": "roomNo/{userid}/all/{roomMasterId}"
+                },
+                {
+                    "name": "createRoom",
+                    "type": "POST",
+                    "url": "roomNo/{userid}/create/{roomMasterId}"
+                },
+                {
+                    "name": "updateRoomNo",
+                    "type": "PUT",
+                    "url": "roomNo/{userId}/update/{roomMasterId}"
+                },
+                {
+                    "name": "deleteRoomByRoomId",
+                    "type": "DELETE",
+                    "url": "roomNo/{userid}/delete/{roomId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Topography",
+            "methods": [
+                {
+                    "name": "getAllBranchesByEntId",
+                    "type": "GET",
+                    "url": "branch/{userid}/getAll/{epid}"
+                },
+                {
+                    "name": "createBranch",
+                    "type": "POST",
+                    "url": "branch/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateBranch",
+                    "type": "PUT",
+                    "url": "branch/{userid}/update/{epid}"
+                },
+                {
+                    "name": "deleteByBranchId",
+                    "type": "DELETE",
+                    "url": "branch/{userid}/delete"
+                },
+                {
+                    "name": "getDepartments",
+                    "type": "GET",
+                    "url": "department/{userid}/all/{branchid}"
+                },
+                {
+                    "name": "createDepartment",
+                    "type": "POST",
+                    "url": "department/{userid}/create/{branchid}"
+                },
+                {
+                    "name": "updateDepartment",
+                    "type": "PUT",
+                    "url": "department/{userid}/update/{branchid}"
+                },
+                {
+                    "name": "deleteDepartment",
+                    "type": "DELETE",
+                    "url": "department/{userid}/delete"
+                },
+                {
+                    "name": "getAllRoomsByDeptId",
+                    "type": "GET",
+                    "url": "room/{userid}/all/{deptId}"
+                },
+                {
+                    "name": "createRoom",
+                    "type": "POST",
+                    "url": "room/{userid}/create/{deptId}"
+                },
+                {
+                    "name": "updateRoom",
+                    "type": "PUT",
+                    "url": "room/{userid}/update/{deptId}"
+                },
+                {
+                    "name": "deleteByRoomId",
+                    "type": "DELETE",
+                    "url": "room/{userid}/room"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Service",
+            "methods": [
+                {
+                    "name": "getAllServices",
+                    "type": "GET",
+                    "url": "service/{userid}/getAll/{branchid}"
+                },
+                {
+                    "name": "createService",
+                    "type": "POST",
+                    "url": "service/{userid}/create/{branchid}"
+                },
+                {
+                    "name": "updateService",
+                    "type": "PUT",
+                    "url": "service/{userid}/update/{branchid}"
+                },
+                {
+                    "name": "deleteByServiceId",
+                    "type": "DELETE",
+                    "url": "service/{userid}/delete/{serviceid}"
+                },
+                {
+                    "name": "mappingServiceWithApptTypes",
+                    "type": "PUT",
+                    "url": "service/{userid}/map/service-appttypes"
+                },
+                {
+                    "name": "getAllServicesByBranches",
+                    "type": "GET",
+                    "url": "service/{userid}/all"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "DepartmentType",
+            "methods": [
+                {
+                    "name": "getAllDepartTypes",
+                    "type": "GET",
+                    "url": "department/{userid}/getAllDeptTypes/{epid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "RoomType",
+            "methods": [
+                {
+                    "name": "getRoomTypes",
+                    "type": "GET",
+                    "url": "roomtype/{userid}/all/{epid}"
+                },
+                {
+                    "name": "createRoomType",
+                    "type": "POST",
+                    "url": "roomtype/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateRoomType",
+                    "type": "PUT",
+                    "url": "roomtype/{userid}/update/{epid}"
+                },
+                {
+                    "name": "deleteRoomType",
+                    "type": "DELETE",
+                    "url": "roomtype/{userid}/delete"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "AppointmentType",
+            "methods": [
+                {
+                    "name": "getApptTypesByBranchId",
+                    "type": "GET",
+                    "url": "appttype/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "getAllApptTypesByLocationId",
+                    "type": "GET",
+                    "url": "appttype/{userid}/getAll/{locationId}"
+                },
+                {
+                    "name": "createApptType",
+                    "type": "POST",
+                    "url": "appttype/{userid}/create/{locationId}"
+                },
+                {
+                    "name": "updateApptType",
+                    "type": "PUT",
+                    "url": "appttype/{userid}/update/{locationId}"
+                },
+                {
+                    "name": "deleteByApptTypeId",
+                    "type": "DELETE",
+                    "url": "appttype/{userid}/delete"
+                },
+                {
+                    "name": "mappingUsersWithApptType",
+                    "type": "PUT",
+                    "url": "appttype/{userid}/map/doctors-apptType"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "MedicalService",
+            "methods": [
+                {
+                    "name": "getAllMedServiceByLocId",
+                    "type": "GET",
+                    "url": "medservice/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "createMedicalService",
+                    "type": "POST",
+                    "url": "medservice/{userid}/create/{epid}/{locationId}"
+                },
+                {
+                    "name": "updateMedicalService",
+                    "type": "PUT",
+                    "url": "medservice/{userid}/update/{epid}/{locationId}"
+                },
+                {
+                    "name": "deleteByMedicalServiceId",
+                    "type": "DELETE",
+                    "url": "medservice/{userid}/delete"
+                },
+                {
+                    "name": "mappingUsersWithMedService",
+                    "type": "PUT",
+                    "url": "medservice/{userid}/map/doctors"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Display",
+            "methods": [
+                {
+                    "name": "getAllDisplaysByLocationId",
+                    "type": "GET",
+                    "url": "display/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "createDisplay",
+                    "type": "POST",
+                    "url": "display/{userid}/create/{epid}/{locationId}"
+                },
+                {
+                    "name": "deleteDisplayBoardById",
+                    "type": "DELETE",
+                    "url": "display/{userid}/delete/{displayId}"
+                },
+                {
+                    "name": "updateDisplayStatus",
+                    "type": "PUT",
+                    "url": "display/{userid}/status-update/{displayId}"
+                },
+                {
+                    "name": "getAllThemes",
+                    "type": "GET",
+                    "url": "display/{userid}/themes/all"
+                },
+                {
+                    "name": "updateDisplayBoard",
+                    "type": "PUT",
+                    "url": "display/{userid}/update/{epid}/{locationId}"
+                },
+                {
+                    "name": "getUrlByDisplayId",
+                    "type": "GET",
+                    "url": "display/{userid}/url/{displayId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Scanner",
+            "methods": [
+                {
+                    "name": "getAllScannersByLocationId",
+                    "type": "GET",
+                    "url": "scanner/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "createScanner",
+                    "type": "POST",
+                    "url": "scanner/{userid}/create/{epid}/{locationId}"
+                },
+                {
+                    "name": "deleteScannerById",
+                    "type": "DELETE",
+                    "url": "scanner/{userid}/delete/{scannerId}"
+                },
+                {
+                    "name": "updateScanner",
+                    "type": "PUT",
+                    "url": "scanner/{userid}/update/{epid}/{locationId}"
+                },
+                {
+                    "name": "updateScannerStatus",
+                    "type": "PUT",
+                    "url": "scanner/{userid}/status-update/{scannerId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Kiosk",
+            "methods": [
+                {
+                    "name": "getAllKiosksByLocationId",
+                    "type": "GET",
+                    "url": "kiosk/{userid}/all/{locationId}"
+                },
+                {
+                    "name": "createDisplay",
+                    "type": "POST",
+                    "url": "kiosk/{userid}/create/{epid}/{locationId}"
+                },
+                {
+                    "name": "updatekiosk",
+                    "type": "PUT",
+                    "url": "kiosk/{userid}/update/{epid}/{locationId}"
+                },
+                {
+                    "name": "deleteKioskById",
+                    "type": "DELETE",
+                    "url": "kiosk/{userid}/delete/{kioskId}"
+                },
+                {
+                    "name": "getUrlByKioskId",
+                    "type": "GET",
+                    "url": "kiosk/{userid}/url/{kioskid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "GlobalSettings",
+            "methods": [
+                {
+                    "name": "getGlobalSettingsBySettingType",
+                    "type": "GET",
+                    "url": "global-settings/{userid}/{settings-type}/{epid}"
+                },
+                {
+                    "name": "updateGlobalSetingsBySettingType",
+                    "type": "POST",
+                    "url": "global-settings/{userid}/{settings-type}/{epid}/"
+                },
+                {
+                    "name": "getQueryParams",
+                    "type": "GET",
+                    "url": "global-settings/{userid}/queryparams/{epid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "NotificationEmail",
+            "methods": [
+                {
+                    "name": "getAllMailNotificationsByEntId",
+                    "type": "GET",
+                    "url": "mail-notification/{userid}/all/{epid}"
+                },
+                {
+                    "name": "createMailNotification",
+                    "type": "POST",
+                    "url": "mail-notification/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateMailNotification",
+                    "type": "PUT",
+                    "url": "mail-notification/{userid}/update/{epid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "NotificationSms",
+            "methods": [
+                {
+                    "name": "getAllNotificationsByEnterpriseId",
+                    "type": "GET",
+                    "url": "sms-notification/{userid}/all/{epid}"
+                },
+                {
+                    "name": "createNotificationSms",
+                    "type": "POST",
+                    "url": "sms-notification/{userid}/create/{epid}"
+                },
+                {
+                    "name": "updateNotificationSms",
+                    "type": "PUT",
+                    "url": "sms-notification/{userid}/update/{epid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "Trigger",
+            "methods": [
+                {
+                    "name": "getAllParams",
+                    "type": "GET",
+                    "url": "trigger/{userid}/allParams/{triggerId}"
+                },
+                {
+                    "name": "getAllTriggers",
+                    "type": "GET",
+                    "url": "trigger/{userid}/allTriggers/{epid}"
+                },
+                {
+                    "name": "sendSampleMessage",
+                    "type": "POST",
+                    "url": "trigger/{userid}/test-msg/{epid}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "ClientProfile",
+            "methods": [
+                {
+                    "name": "getAllBranchesWithServicesByLocationIdAndBranchType",
+                    "type": "GET",
+                    "url": "branch/{userid}/bracnches-services/{locationId}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "UserProfile",
+            "methods": [
+                {
+                    "name": "getMappedServicesByUserId",
+                    "type": "GET",
+                    "url": "userprofile/{userid}/mapped-services"
+                },
+                {
+                    "name": "mappingServicesToUser",
+                    "type": "POST",
+                    "url": "userprofile/{userid}/map/services-user"
+                },
+                {
+                    "name": "mappingRoomToUser",
+                    "type": "POST",
+                    "url": "userprofile/{userid}/map/room-user"
+                },
+                {
+                    "name": "getMappedRoomByUserId",
+                    "type": "GET",
+                    "url": "userprofile/{userid}/mapped/room-user"
+                },
+                {
+                    "name": "getRoomsByUserId",
+                    "type": "GET",
+                    "url": "userprofile/{userid}/rooms"
+                },
+                {
+                    "name": "updateTokenPriority",
+                    "type": "PUT",
+                    "url": "userprofile/{userid}/priority-update/{tokenId}"
+                },
+                {
+                    "name": "getMappedServicesAndCountByUserId",
+                    "type": "GET",
+                    "url": "userprofile/{userid}/mapped-services-count/{status}"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "VitalController",
+            "methods": [
+                {
+                    "name": "getServingStatsByServicewise",
+                    "type": "GET",
+                    "url": "vital-serving/{userid}/vital-serving-statics/{serviceId}"
+                },
+                {
+                    "name": "getTokensInfo",
+                    "type": "GET",
+                    "url": "vital-serving/{userid}/tokens-info/{serviceId}"
+                },
+                {
+                    "name": "tokenAction",
+                    "type": "POST",
+                    "url": "vital-serving/{userid}/token-action"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "NurseServingController",
+            "methods": [
+                {
+                    "name": "getServingStatsByServicewise",
+                    "type": "GET",
+                    "url": "nurse-serving/{userid}/nurse-serving-stats/{serviceId}"
+                },
+                {
+                    "name": "getTokensInfo",
+                    "type": "GET",
+                    "url": "nurse-serving/{userid}/tokens-info/{serviceId}"
+                },
+                {
+                    "name": "tokenAction",
+                    "type": "POST",
+                    "url": "nurse-serving/{userid}/token-action"
+                }
+            ]
+        },
+        {
+            "apiUrl": "",
+            "component": "ManualTokenController",
+            "methods": [
+                {
+                    "name": "checkIn",
+                    "type": "GET",
+                    "url": "manualtoken/{userid}/checkin/{serviceBookedId}"
+                },
+                {
+                    "name": "generateManualToken",
+                    "type": "POST",
+                    "url": "manualtoken/{userid}/generate/{locationId}"
+                },
+                {
+                    "name": "rePrintToken",
+                    "type": "GET",
+                    "url": "manualtoken/{userid}/reprint/{serviceBookedId}"
+                },
+                {
+                    "name": "searchMrnNo",
+                    "type": "GET",
+                    "url": "manualtoken/{userid}/search/{mrnNo}"
+                }
+            ]
+        }
+    ]
+}
