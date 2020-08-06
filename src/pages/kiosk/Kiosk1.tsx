@@ -255,7 +255,7 @@ class Kiosk1 extends Component<any, any> {
 
                     {this.state.tabId === 3 &&
                         <div className="kiosk-content bgImage">
-                            <Row className="content-sec w100">
+                            <Row className="content-sec w90">
                                 <Col sm="6" className="welcometext">
                                     <div>
                                         <h2>Verification,</h2>
@@ -263,13 +263,13 @@ class Kiosk1 extends Component<any, any> {
                                     </div>
                                 </Col>
                                 <Col sm="6" className="align-center">
-                                    <button className="verification-btn" onClick={this.emirates}>
+                                    <button className="verification-btn mleft-30" onClick={this.emirates}>
                                         <div>
                                             EMIRATES ID/<br />SMART CARD
                                             <img src={emiratesverf} alt="" width="80" />
                                         </div>
                                     </button>
-                                    <button className="verification-btn" onClick={this.selectMrn}>MRN ID</button>
+                                    <button className="verification-btn mleft-10" onClick={this.selectMrn}>MRN ID</button>
                                 </Col>
                             </Row>
                         </div>
@@ -497,7 +497,7 @@ class Kiosk1 extends Component<any, any> {
                         <div className="kiosk-content">
                             <Row className="content-sec w70 text-center">
                                 <Col sm="6">
-                                    <div className="tableCard">
+                                    <div className="tableCard mleft-30">
                                         <table className="tableWidth">
                                             <tbody>
                                                 <tr>
@@ -631,7 +631,7 @@ class Kiosk1 extends Component<any, any> {
                         <div className="kiosk-content">
                             <div className="errorMessage">
                                 <div className="close-button" onClick={this.exit}>
-                                    <img src={close} alt="" width="28" />
+                                    <img src={close} alt="" width="30" />
                                 </div>
                                 <img src={errorimg} alt="" />
                                 <p>Something went wrong, please<br /> visit the registration desk</p>

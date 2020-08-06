@@ -22,7 +22,7 @@
 .languagebtn:first-child{background:#fcf0e3; color: #1F2350; border: none}
 .kiosk-content .welcometext{color:#ffffff; display: flex; justify-content: center; align-items: center;}
 .homemenu-sec{max-width:37%;}
-.homemenu-sec h2{text-align: left;width: 100%}
+.homemenu-sec h2{text-align: left;width: 100%; font-size: 38px;}
 .kiosk-menuItem{width: 160px;height: 160px; text-align:center; color: #ffffff; float: left; font-size: 20px; font-weight: 500; margin-bottom: 20px; padding: 10px 20px; cursor: pointer;
     margin-right: 20px; box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);background-image: linear-gradient(to bottom, #5d62b5 2%, #41458d); overflow: hidden; position: relative; }
 .kiosk-menuItem .menuitem-title{position: absolute; bottom: 15px; right: 0; left: 0;}
@@ -36,6 +36,7 @@
 .w80{width:80%}
 .w70{width: 70%}
 .w55{width: 55%}
+.w90 {width: 90%}
 .submit-btn.btn, .submit-btn.btn:hover{background-color: #ffffff; color:#343881; font-size: 26px; padding: 10px 30px; margin-left: 15px; font-weight: bold; vertical-align: bottom; border-radius: 6px}
 .verification-btn{border: 2px solid #ffffff; background: transparent; float: left; font-size:16px;padding:20px 10px; margin-right: 20px; width: 150px; height: 135px;
     font-weight: 500; border-radius: 4px; color:#ffffff; display:flex; align-items: center; justify-content: center;}
@@ -44,7 +45,7 @@
 .pad-btm30{padding-bottom: 30%}
 .feedback-sec img{width:16%; margin-right:15px}
 .feedback-sec img:hover {top:0; position: relative; animation-name: swing; animation-duration: 1s;}
-.feedback-sec p{margin-top: 25px; font-size: 20px;}
+.feedback-sec p{margin-top: 25px; font-size: 22px;}
 .tokenmsg h3{color: #ffffff; font-family: "Roboto", sans-serif; margin-bottom: 0; font-weight: 500;}
 .tokenmsg h1{font-size: 65px; font-weight: 500; margin-top: 0; margin-bottom: 0;}
 .tokenmsg p { font-size: 18px; font-weight: normal;}
@@ -72,7 +73,7 @@
 .verfcontent h2{font-size: 24px;}
 .errorMessage { display: flex; flex-direction: column; position:relative; background: #191C47; color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 10px 10px 10px #23264F; }
 .errorMessage p {  font-size: 26px; text-align: center;}
-.errorMessage .close-button { width: 30px; height: 30px; cursor:pointer; background: #ffffff; color: #F47270; position: absolute; border-radius: 50%; top:-15px; right: -15px; display: flex; justify-content: center; align-items: center;}
+.errorMessage .close-button { width: 38px; height: 38px; cursor:pointer; background: #ffffff; color: #F47270; position: absolute; border-radius: 50%; top:-15px; right: -15px; display: flex; justify-content: center; align-items: center;}
 .errorMessage .close-button i{font-weight: 900}
 
 /* Token print css*/
@@ -108,6 +109,8 @@
     display: inline-block;
     border-radius: 6px;
   }
+  .mleft-30 { margin-left: 30px;}
+  .mleft-10 { margin-left: 10px;}
   
 .simple-keyboard { max-width: 1024px; position: absolute; bottom: 0; left:0; z-index: 99; font-size: 18px; right: 0; margin: 0 auto;}
 
