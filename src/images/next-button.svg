@@ -17,25 +17,59 @@
   <defs
      id="defs901" />
   <sodipodi:namedview
+     inkscape:guide-bbox="true"
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="74.280159"
-     inkscape:cy="75.553947"
+     inkscape:zoom="4"
+     inkscape:cx="69.932175"
+     inkscape:cy="62.995776"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     showguides="false"
+     showguides="true"
      inkscape:window-width="1274"
      inkscape:window-height="728"
      inkscape:window-x="76"
      inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       id="guide887"
+       orientation="1,0"
+       position="0.74835468,3.1303694" />
+    <sodipodi:guide
+       id="guide889"
+       orientation="0,-1"
+       position="43.123939,33.158102" />
+    <sodipodi:guide
+       id="guide891"
+       orientation="1,0"
+       position="33.395328,3.5980911" />
+    <sodipodi:guide
+       id="guide893"
+       orientation="0,-1"
+       position="-2.6192414,0.32403926" />
+    <sodipodi:guide
+       id="guide895"
+       orientation="1,0"
+       position="12.088151,15.495703" />
+    <sodipodi:guide
+       id="guide897"
+       orientation="1,0"
+       position="21.328109,21.511832" />
+    <sodipodi:guide
+       id="guide899"
+       orientation="0,-1"
+       position="23.944792,23.185157" />
+    <sodipodi:guide
+       id="guide901"
+       orientation="0,-1"
+       position="22.286938,10.099422" />
+  </sodipodi:namedview>
   <metadata
      id="metadata904">
     <rdf:RDF>
@@ -44,7 +78,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,31 +86,29 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       transform="matrix(0.26458333,0,0,0.26458333,-313.16851,-227.74485)"
-       id="g987">
-      <circle
-         r="60.98056"
-         cy="925.70044"
-         cx="1248.208"
-         id="path945"
-         style="fill:none;fill-opacity:1;stroke:#b6bbdd;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="4.8355918"
-         y="902.784"
-         x="1231.1837"
-         height="47.514938"
-         width="31.9569"
-         id="rect961"
-         style="fill:none;fill-opacity:1;stroke:#b6bbdd;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         id="path977"
-         d="m 1247.0192,926.47615 31.7687,-0.29733"
-         style="fill:none;stroke:#b6bbdd;stroke-width:3.07775;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         id="path981"
-         d="m 1273.6528,934.11019 5.7292,-8.19948 -5.5715,-6.51754"
-         style="fill:none;stroke:#b6bbdd;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.52916698;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path945-7"
+       cx="16.82892"
+       cy="17.345217"
+       r="16.134439" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:0.55;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 16.627492,17.414122 8.405467,-0.07867"
+       id="path977-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 23.674299,19.433962 1.51585,-2.169446 -1.47413,-1.724433"
+       id="path981-8"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       ry="1.2725769"
+       y="11.145573"
+       x="12.46849"
+       height="12.574472"
+       width="8.4244566"
+       id="rect903"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.526528;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

@@ -56,7 +56,7 @@ class Kiosk1 extends Component<any, any> {
         this.setState({ tabId: 4 })
         setTimeout(() => {
             this.setState({ tabId: 6 })
-        }, 10000)
+        }, 5000)
     }
 
     selectMrn = () => {
@@ -205,14 +205,14 @@ class Kiosk1 extends Component<any, any> {
 
                     {this.state.tabId === 1 &&
                         <div className="kiosk-content bgImage">
-                            <Row className="content-sec w100 pb-2">
+                            <Row className="content-sec w95 pb-2">
                                 <Col sm="6" className="welcometext">
                                     <div>
                                         <h2>Welcome,</h2>
                                         <p>Please select the appropriate language</p>
                                     </div>
                                 </Col>
-                                <Col sm="6" className="align-center pad-lft30">
+                                <Col sm="6" className="align-center pad-left0">
                                     <button className="languagebtn" onClick={this.selectMenu}>ENG</button>
                                     <button className="languagebtn" onClick={this.selectMenu}>عربى</button>
                                 </Col>
@@ -263,7 +263,7 @@ class Kiosk1 extends Component<any, any> {
                                     </div>
                                 </Col>
                                 <Col sm="6" className="align-center">
-                                    <button className="verification-btn mleft-30" onClick={this.emirates}>
+                                    <button className="verification-btn" onClick={this.emirates}>
                                         <div>
                                             EMIRATES ID/<br />SMART CARD
                                             <img src={emiratesverf} alt="" width="80" />
@@ -495,9 +495,9 @@ class Kiosk1 extends Component<any, any> {
 
                     {this.state.tabId === 7 &&
                         <div className="kiosk-content">
-                            <Row className="content-sec w70 text-center">
-                                <Col sm="6">
-                                    <div className="tableCard mleft-30">
+                            <Row className="content-sec w60 text-center">
+                                <Col sm="6" className="pad-0">
+                                    <div className="tableCard">
                                         <table className="tableWidth">
                                             <tbody>
                                                 <tr>
@@ -597,7 +597,7 @@ class Kiosk1 extends Component<any, any> {
                                     </div>
                                 </Col>
 
-                                <Col sm="6" className="tokenmsg">
+                                <Col sm="6" className="tokenmsg pad-0">
                                     <div className="text-right">
                                         <h3>Thank you,</h3>
                                         <h1>CDR123</h1>

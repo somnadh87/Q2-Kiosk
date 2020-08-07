@@ -18,7 +18,7 @@
 .content-sec h1{color: #ffffff; font-family: "Roboto", sans-serif }
 .content-sec h2{color: #ffffff; font-size:30px; font-family: "Roboto", sans-serif; font-weight: 500 }
 .mrnText{ font-size: 60px; line-height: 50px; margin-bottom: 20px;}
-.languagebtn{border: 2px solid #ffffff;  background: transparent; font-size:18px; font-weight:500; padding:10px; margin-right: 20px; width: 150px; height:135px; border-radius: 4px; color:#ffffff}
+.languagebtn{border: 2px solid #ffffff;  background: transparent; font-size:18px; font-weight:500; padding:10px; margin-right: 25px; width: 150px; height:135px; border-radius: 4px; color:#ffffff}
 .languagebtn:first-child{background:#fcf0e3; color: #1F2350; border: none}
 .kiosk-content .welcometext{color:#ffffff; display: flex; justify-content: center; align-items: center;}
 .homemenu-sec{max-width:37%;}
@@ -37,13 +37,17 @@
 .w70{width: 70%}
 .w55{width: 55%}
 .w90 {width: 90%}
+.w60 {width: 60%}
+.w95 {width: 95%}
+.pad-0{padding:0 !important}
+.align-center{display: flex; align-items: center; justify-content: center;}
 .submit-btn.btn, .submit-btn.btn:hover{background-color: #ffffff; color:#343881; font-size: 26px; padding: 10px 30px; margin-left: 15px; font-weight: bold; vertical-align: bottom; border-radius: 6px}
 .verification-btn{border: 2px solid #ffffff; background: transparent; float: left; font-size:16px;padding:20px 10px; margin-right: 20px; width: 150px; height: 135px;
     font-weight: 500; border-radius: 4px; color:#ffffff; display:flex; align-items: center; justify-content: center;}
 .verification-btn:first-child { background: #fcf0e3; color: #000000; border: none}
 .btn-icon { font-size: 50px;}
 .pad-btm30{padding-bottom: 30%}
-.feedback-sec img{width:16%; margin-right:15px}
+.feedback-sec img{width:18%; margin-right:15px}
 .feedback-sec img:hover {top:0; position: relative; animation-name: swing; animation-duration: 1s;}
 .feedback-sec p{margin-top: 25px; font-size: 22px;}
 .tokenmsg h3{color: #ffffff; font-family: "Roboto", sans-serif; margin-bottom: 0; font-weight: 500;}
@@ -51,7 +55,7 @@
 .tokenmsg p { font-size: 18px; font-weight: normal;}
 .tokenmsg{display: flex; align-items: flex-end; justify-content: center; flex-direction: column}
 .appointments-container { padding-bottom: 40px; width: 100%;display: flex; overflow-x: auto; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-
+.pad-left0{padding-left: 0 !important;}
 .appointments-container .appointment { background: #ffffff; border-radius: 10px; box-shadow: 5px 5px 10px #23264F; 
         margin-right: 15px; color: #54599c; padding:15px;  flex:1 0 30%; position: relative;}
 .appointments-container .appointment:last-child{margin-right: 3%}

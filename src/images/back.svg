@@ -13,51 +13,29 @@
    version="1.1"
    id="svg907"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="back.svg">
+   sodipodi:docname="back-button.svg">
   <defs
      id="defs901" />
   <sodipodi:namedview
-     inkscape:guide-bbox="true"
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="55.422022"
-     inkscape:cy="58.56391"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="66.289437"
+     inkscape:cy="70.396065"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     showguides="true"
+     showguides="false"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
-    <sodipodi:guide
-       id="guide837"
-       orientation="1,0"
-       position="11.90625,14.123177" />
-    <sodipodi:guide
-       id="guide839"
-       orientation="0,-1"
-       position="16.569531,14.288542" />
-    <sodipodi:guide
-       id="guide841"
-       orientation="0,-1"
-       position="20.813615,18.845818" />
-    <sodipodi:guide
-       id="guide847"
-       orientation="1,0"
-       position="14.242125,12.157398" />
-    <sodipodi:guide
-       id="guide849"
-       orientation="0,-1"
-       position="14.242125,16.620183" />
-  </sodipodi:namedview>
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata904">
     <rdf:RDF>
@@ -66,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -74,21 +52,24 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="fill:none;fill-opacity:1;stroke:#b6bbdd;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path945"
-       cx="16.877361"
-       cy="16.962862"
-       r="16.134439" />
-    <path
-       style="fill:none;stroke:#b6bbdd;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 23.63838,17.453437 -11.0513,-0.07867"
-       id="path977"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#b6bbdd;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 13.94574,19.473277 -1.887827,-2.09851 1.87303,-2.02765"
-       id="path981"
-       sodipodi:nodetypes="ccc" />
+    <g
+       id="g844">
+      <circle
+         r="16.134439"
+         cy="16.962862"
+         cx="16.877361"
+         id="path945"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path977"
+         d="m 23.63838,17.453437 -11.0513,-0.07867"
+         style="fill:none;stroke:#ffffff;stroke-width:0.55;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         id="path981"
+         d="m 13.94574,19.473277 -1.51585,-2.169446 1.47413,-1.724433"
+         style="fill:none;stroke:#ffffff;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>
