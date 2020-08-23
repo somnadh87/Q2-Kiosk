@@ -20,20 +20,19 @@ const setAppsetting = (data: Settings) => {
 const getAppsetting = () => {
     return appsetting;
 }
-const getShowMessagecode = () => {
-    return appsetting.showMessagecode
+const gettranId = (modulesCode?: string) => {
+    return modulesCode ? `${modulesCode}${Math.random().toString(36).slice(7)}` : (Math.random().toString(36).slice(7)) + '';
 }
-const getAutoRefresing = () => {
-    return appsetting.autoRefresing
+const getIntervalCall = () => {
+    return appsetting.intervalCall;
 }
-const getTokenServingInterval = () => {
-    return appsetting.tokenServingInterval;
+const getSessionReset = () => {
+    return appsetting.sessionReset;
 }
-const getautoRefreshTime = () => {
-    return typeof (appsetting.autoRefreshTime) === 'number' ? (appsetting.autoRefreshTime * 1000) : 30000;
+const getShowMessageTime = () => {
+    return appsetting.showMessageTime;
 }
-const getSessionTime = () => {
-    return typeof (appsetting.sessionTime) === 'number' ? appsetting.sessionTime : 20;
+const getDateTimeInterval = () => {
+    return appsetting.dateTimeInterval;
 }
-
-export { getShowMessagecode, getAutoRefresing,getTokenServingInterval, getautoRefreshTime, getSessionTime, setAppsetting, getAppsetting, setApiUrlsData, getApiServiceUrlByComponentAndMethod }
+export { getDateTimeInterval, getSessionReset, getShowMessageTime, setAppsetting, getAppsetting, setApiUrlsData, getApiServiceUrlByComponentAndMethod, getIntervalCall, gettranId }

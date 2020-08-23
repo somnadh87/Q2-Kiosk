@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import IdleTimer from 'react-idle-timer';
+import { getSessionReset } from './helpers/helpersIndex';
+import { exitAction } from './store/actions';
+import { connect } from 'react-redux';
+
 class AppIdle extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            timeout: 60000 * 1
+            timeout: 60000 * getSessionReset()
         }
 
         this.idleTimer = null
@@ -28,7 +32,7 @@ class AppIdle extends Component {
         console.log('useridle is idle', e, this.props.history.location.pathname)
         // const isTimedOut = this.state.isTimedOut
         this.idleTimer.reset();
-
+        this.props.exitAction();
     }
     render() {
         return (
@@ -44,4 +48,7 @@ class AppIdle extends Component {
             </>)
     }
 }
-export default withRouter(AppIdle);
+
+export default withRouter(connect(null, { exitAction })(AppIdle));
+
+

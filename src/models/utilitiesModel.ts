@@ -13,12 +13,10 @@ export interface IApiThrowResponse {
 }
 export interface Settings {
     sessionName;
-    sessionTime;
-    showMessagecode;
-    autoRefresing;
-    autoRefreshTime;
-    tokenServingInterval;
-
+    sessionReset;
+    intervalCall;
+    showMessageTime;
+    dateTimeInterval;
 }
 
 export interface IApiUrls {
@@ -34,3 +32,29 @@ export interface IApiMethod {
 }
 
 
+export enum IKioskThemes {
+    THEME1 = 'theme1',
+    THEME2 = 'theme2',
+    THEME3 = 'theme3',
+    THEME4 = 'theme4',
+    THEME5 = 'theme5',
+    THEME6 = 'theme6'
+}
+
+export enum Ilanguages {
+    ENG = '',
+    ARB = '-Ar'
+}
+
+export enum IMenuCodes {
+    REGISTRATION = 'REGISTRATION',
+    APPOINTMENT = 'APPOINTMENT',
+    PHARMACY = 'PHARMACY',
+    LABORATORY = 'LABORATORY',
+    FEEDBACK = 'FEEDBACK',
+}
+
+export enum IAppoinmentCodes {
+    EMIRATESID = 'EMRID',
+    MRNID = 'MRNNO',
+}

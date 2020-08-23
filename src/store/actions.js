@@ -1,1 +1,1 @@
-
+export * from './kiosk/actions';

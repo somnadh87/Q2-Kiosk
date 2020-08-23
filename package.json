@@ -11,6 +11,7 @@
     "axios-mock-adapter": "^1.17.0",
     "bootstrap": "^4.4.1",
     "create-react-class": "^15.6.3",
+    "formik": "^2.1.5",
     "i18next": "^19.4.0",
     "i18next-browser-languagedetector": "^4.0.2",
     "lodash.clonedeep": "^4.5.0",
@@ -18,6 +19,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
+    "react-barcode": "^1.4.0",
     "react-dom": "^16.12.0",
     "react-i18next": "^11.3.4",
     "react-idle-timer": "^4.2.12",
@@ -26,13 +28,15 @@
     "react-scripts": "^3.4.0",
     "react-simple-keyboard": "^2.3.122",
     "react-sound": "^1.2.0",
+    "react-topbar-progress-indicator": "^4.1.0",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.4",
     "redux-form": "^8.2.6",
     "redux-persist": "^6.0.0",
     "redux-persist-transform-encrypt": "^2.0.1",
     "redux-saga": "^1.0.5",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.5.5",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "start": "SET PORT=5300 && react-scripts start --host 0.0.0.0",

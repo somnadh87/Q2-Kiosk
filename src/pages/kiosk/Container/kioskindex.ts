@@ -1,0 +1,14 @@
+export { default as ThemeOneKioskContainer } from '../theme1/container/themeonekioskcontainer';
+export { default as ThemeOneTopBar } from '../theme1/components/themeonetopbar';
+export { default as ThemeOneKioskManager } from '../theme1/components/themeonekioskmanager';
+export { default as ThemeOneFooter } from '../theme1/components/themeonefooter';
+export { default as MrnVerfication } from '../theme1/components/mrnverification';
+export { default as EmiratesIdVerification } from '../theme1/components/emiratesidverification';
+export { default as ThemeOneAppointmentsList } from '../theme1/components/themeoneappointmentlist';
+export { default as ThemeOneErrorBlock } from '../theme1/components/themeoneerrorblock';
+export { default as ThemeOneFeedback } from '../theme1/components/themeonefeedback';
+export { default as ThemeOneMenus } from '../theme1/components/themeonemenus';
+export { default as ThemeOneTokenGeneration } from '../theme1/components/themeonetokengeneration';
+export { default as ThemeOneVerificationMode } from '../theme1/components/themeoneverificationmode';
+export { default as ThemeOneHome } from '../theme1/components/themeonehome';
+export { default as ThemeOneTime } from '../theme1/components/themeonetime';
