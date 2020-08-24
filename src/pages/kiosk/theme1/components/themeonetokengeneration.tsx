@@ -36,7 +36,7 @@ const ThemeOneTokenGeneration: React.FC = () => {
     return (
         <>
             {templateData && templateData.templates && <div className="kiosk-content">
-                <Row className="w60 text-center">
+                <Row className="w70 text-center">
                     <Col sm="6" className="pad-0">
                         <div className="tableCard">
                             <section id="tokenTemplate1"></section>

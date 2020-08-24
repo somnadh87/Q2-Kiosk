@@ -9,6 +9,7 @@ import { IKioskModel } from '../../../../models/kioskModel';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { customContentValidation } from '../../../../helpers/helpersIndex';
 import * as Yup from 'yup';
+import { Row, Col } from 'reactstrap';
 
 interface IProps {
     mrnSubmitRequest: any;
@@ -98,10 +99,10 @@ const MrnVerfication: React.FC = () => {
 
     return (
         <>
-            <div className="kiosk-content">
-                <div className="content-sec w100 text-center pad-btm30" >
-                    <p className="mb-0">{t('Kiosk.pleaseEnterYour' + language)}</p>
-                    <h1 className="mt-0 mrnText">{t('Kiosk.MrnId' + language)}</h1>
+            <div className="kiosk-content mrnstyle">
+                <div className="content-sec w100 pad-btm15" >
+                    <p className="mb-0 align-center">{t('Kiosk.pleaseEnterYour' + language)}</p>
+                    <h1 className="mt-0 mrnText align-center">{t('Kiosk.MrnId' + language)}</h1>
                     <div className="form-group frmInput">
                         <Formik
                             enableReinitialize
@@ -121,6 +122,8 @@ const MrnVerfication: React.FC = () => {
                             {({ errors, touched, dirty, values, setFieldValue, setFieldTouched }) => (
                                 <Form>
                                     {console.log("hfusiivnis =>", values, errors, touched)}
+                                    <Row>
+                                    <Col sm="8" className="txt-rgt">
                                     <input type="text" name="mrnNo" autoComplete="off"
                                         onFocus={() => setFieldValue('keyboardopen', true)}
                                         onBlur={() => setFieldTouched('mrnNo', true)}
@@ -130,10 +133,14 @@ const MrnVerfication: React.FC = () => {
                                         // onChange={(event) => setFieldValue('mrnNo', event.target.value)}
                                         onChange={e => onChangeInput(e)}
                                     />
-                                    {errors.mrnNo && touched.mrnNo && (
-                                        <div className="error-msg mt-0">{errors.mrnNo}
-                                        </div>
-                                    )}
+                                    <div style={{height:'20px'}}>
+                                        {errors.mrnNo && touched.mrnNo && (
+                                            <div className="error-msg mt-0"><span>{errors.mrnNo}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                    </Col>
+
                                     {values.keyboardopen && <Keyboard display={display} layout={layout}
                                         layoutName={layoutName}
                                         keyboardRef={r => (keyboard = r)}
@@ -147,7 +154,10 @@ const MrnVerfication: React.FC = () => {
                                         ]}
                                     />
                                     }
+                                    <Col sm="4"  className="txt-lft">
                                     <button type="submit" className="btn submit-btn">{t('Kiosk.submit' + language)}</button>
+                                    </Col>
+                                    </Row>
                                 </Form>
                             )}
                         </Formik>
