@@ -19,9 +19,9 @@ class PageUnDisplay extends Component {
                                             <Col lg={{ size: 4, offset: 1 }}>
                                                 <div className="ex-page-content">
                                                     {/* <h1 className="text-dark">403!</h1> */}
-                                                    <h4 className="mb-4">Sorry, UnAuthorized Display Board</h4>
+                                                    <h4 className="mb-4">Sorry, UnAuthorized Kiosk</h4>
                                                     <p className="mb-5">
-                                                        You are Not Authorized to View This Display Board
+                                                        You are Not Authorized to View This Kiosk
                                                     </p>
                                                 </div>
                                             </Col>
