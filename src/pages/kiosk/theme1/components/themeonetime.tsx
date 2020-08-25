@@ -38,7 +38,7 @@ const ThemeOneTime: React.FC = () => {
     return (
         <>
             <p className="time">{moment(currentDateTime).format('hh:mm A')}</p>
-            <p className="day">{moment(currentDateTime).format('DD MMMM YYYY')}</p>
+            <p className="day">{moment(currentDateTime).format('dddd')}, {moment(currentDateTime).format('DD MMMM YYYY')}</p>
         </>
     )
 }
