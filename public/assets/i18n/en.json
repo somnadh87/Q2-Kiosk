@@ -2,9 +2,13 @@
   "controleErrors": {
     "ServerError": "Server Error, Please tryagain after some time",
     "min": "Enter atleast {min} characters",
+    "min-Ar": "Enter atleast {min} characters-ar",
     "max": "Max {max} characters are allowed",
+    "max-Ar": "Max {max} characters are allowed-ar",
     "required": "This field is required",
-    "number": "Allow only numbers"
+    "required-Ar": "This field is required-ar",
+    "number": "Allow only numbers",
+    "number-Ar": "Allow only numbers-ar"
   },
   "errorMessage": {
     "EM1": "Something went wrong, please",

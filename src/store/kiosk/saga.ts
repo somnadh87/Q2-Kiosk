@@ -37,8 +37,8 @@ function* getThemsAndMenusData(action) {
     }
     console.log(`${tranId}_getThemsAndMenusData_End => `, kisokId, themeName, menusData, action.payload.action, errorMessage);
     yield put(actions.setKioskIdAndGetMenusDataResponse(kisokId, themeName, menusData, action.payload.action, errorMessage));
-
 }
+
 function* getMenusDataAfterLanguageSelection(action) {
     let tranId = gettranId(KIOSKMODULE);
     console.log(`${tranId}_getMenusDataAfterLanguageSelection_Start => `, action);
@@ -54,7 +54,7 @@ function* getMenusDataAfterLanguageSelection(action) {
 
     catch (error) {
         // navigate to 403
-        console.log(`${tranId}_getTokensData_catch => `, error);
+        console.log(`${tranId}_getMenusDataAfterLanguageSelection_catch => `, error);
         yield put(actions.setLanguageResponse(language, undefined));
     }
 }

@@ -111,7 +111,7 @@ const MrnVerfication: React.FC = () => {
                                 keyboardopen: false
                             }}
                             validationSchema={Yup.object().shape({
-                                mrnNo: customContentValidation(t, t('controleErrors.required'), { patternType: 'number', message: 'number', spacialChar: null }, 8, 2)
+                                mrnNo: customContentValidation(t, t('controleErrors.required' + language), { patternType: 'number', message: 'number' + language, spacialChar: null }, 8, 2, language)
                             })}
                             onSubmit={(values) => {
                                 console.log("Values =>", values);
@@ -123,40 +123,40 @@ const MrnVerfication: React.FC = () => {
                                 <Form>
                                     {console.log("hfusiivnis =>", values, errors, touched)}
                                     <Row>
-                                    <Col sm="8" className="txt-rgt">
-                                    <input type="text" name="mrnNo" autoComplete="off"
-                                        onFocus={() => setFieldValue('keyboardopen', true)}
-                                        onBlur={() => setFieldTouched('mrnNo', true)}
-                                        value={values.mrnNo}
-                                        placeholder={t('Kiosk.mrnNoPlaceholder')}
-                                        className={'form-control ' + (errors.mrnNo && touched.mrnNo ? 'is-invalid' : '')}
-                                        // onChange={(event) => setFieldValue('mrnNo', event.target.value)}
-                                        onChange={e => onChangeInput(e)}
-                                    />
-                                    <div style={{height:'20px'}}>
-                                        {errors.mrnNo && touched.mrnNo && (
-                                            <div className="error-msg mt-0"><span>{errors.mrnNo}</span>
+                                        <Col sm="8" className="txt-rgt">
+                                            <input type="text" name="mrnNo" autoComplete="off"
+                                                onFocus={() => setFieldValue('keyboardopen', true)}
+                                                onBlur={() => setFieldTouched('mrnNo', true)}
+                                                value={values.mrnNo}
+                                                placeholder={t('Kiosk.mrnNoPlaceholder')}
+                                                className={'form-control ' + (errors.mrnNo && touched.mrnNo ? 'is-invalid' : '')}
+                                                // onChange={(event) => setFieldValue('mrnNo', event.target.value)}
+                                                onChange={e => onChangeInput(e)}
+                                            />
+                                            <div style={{ height: '20px' }}>
+                                                {errors.mrnNo && touched.mrnNo && (
+                                                    <div className="error-msg mt-0"><span>{errors.mrnNo}</span>
+                                                    </div>
+                                                )}
                                             </div>
-                                        )}
-                                    </div>
-                                    </Col>
+                                        </Col>
 
-                                    {values.keyboardopen && <Keyboard display={display} layout={layout}
-                                        layoutName={layoutName}
-                                        keyboardRef={r => (keyboard = r)}
-                                        onChange={input => setFieldValue('mrnNo', input)}
-                                        onKeyPress={button => onKeyPress(button)}
-                                        buttonTheme={[
-                                            {
-                                                class: "hg-grey",
-                                                buttons: "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M q w e r t y u i o p a s d f g h j k l z x c v b n m {space} 1 2 3 4 5 6 7 8 9 0"
-                                            }
-                                        ]}
-                                    />
-                                    }
-                                    <Col sm="4"  className="txt-lft">
-                                    <button type="submit" className="btn submit-btn">{t('Kiosk.submit' + language)}</button>
-                                    </Col>
+                                        {values.keyboardopen && <Keyboard display={display} layout={layout}
+                                            layoutName={layoutName}
+                                            keyboardRef={r => (keyboard = r)}
+                                            onChange={input => setFieldValue('mrnNo', input)}
+                                            onKeyPress={button => onKeyPress(button)}
+                                            buttonTheme={[
+                                                {
+                                                    class: "hg-grey",
+                                                    buttons: "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M q w e r t y u i o p a s d f g h j k l z x c v b n m {space} 1 2 3 4 5 6 7 8 9 0"
+                                                }
+                                            ]}
+                                        />
+                                        }
+                                        <Col sm="4" className="txt-lft">
+                                            <button type="submit" className="btn submit-btn">{t('Kiosk.submit' + language)}</button>
+                                        </Col>
                                     </Row>
                                 </Form>
                             )}

@@ -44,18 +44,18 @@ const filterCustomPattern = (type) => {
         return filteredPattern
     else return '';
 }
-export const customContentValidation = (t, isRequired = '', pattern = null, maxLength = 0, minLength = 0) => {
+export const customContentValidation = (t, isRequired = '', pattern = null, maxLength = 0, minLength = 0, lanugage = '') => {
     console.log("englishContentValidate =>", isRequired, minLength, maxLength, pattern);
     let controleValidate = Yup.string();
 
     if (isRequired !== '')
         controleValidate = controleValidate.required(isRequired);
     if (minLength !== 0) {
-        let minMsg = t('controleErrors.min').replace('{min}', minLength + '');
+        let minMsg = t('controleErrors.min' + lanugage).replace('{min}', minLength + '');
         controleValidate = controleValidate.min(minLength, minMsg).trim(minMsg);
     }
     if (maxLength !== 0)
-        controleValidate = controleValidate.max(maxLength, t('controleErrors.max').replace('{max}', maxLength + ''));
+        controleValidate = controleValidate.max(maxLength, t('controleErrors.max' + lanugage).replace('{max}', maxLength + ''));
     if (pattern) {
         let patterndata = pattern.patternType ? filterCustomPattern(pattern.patternType) : '';
         let message = t('controleErrors.' + pattern.message);
