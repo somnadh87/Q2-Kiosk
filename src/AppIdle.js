@@ -10,7 +10,7 @@ class AppIdle extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            timeout: 60000 * getSessionReset()
+            timeout: 1000 * getSessionReset()
         }
 
         this.idleTimer = null
