@@ -41,7 +41,7 @@ const ThemeOneErrorBlock: React.FC = () => {
             {errorMessage && errorMessage !== '' &&
                 <Modal isOpen={errorMessage !== '' ? true : false}>
                     <ModalBody>
-                        <div className="kiosk-content">
+                        <div className="kiosk-content" style={{paddingTop: "160px"}}>
                             <div className="errorMessage">
                                 <div className="close-button" onClick={suspendErrorInitiate}>
                                     <img src={close} alt="" width="30" />
