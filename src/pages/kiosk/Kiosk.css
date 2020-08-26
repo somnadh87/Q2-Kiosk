@@ -149,8 +149,8 @@
 .txt-lft{text-align: left;}
 .frmInput input.form-control, .frmInput input.form-control:focus{margin-bottom: 20px;}
 .modal-content {background-color: transparent !important; border:none !important;}
-.modal-backdrop {background-color: #fff !important;}
-
+.modal-backdrop {background-color: #3D417A !important;}
+.modal-backdrop.show{opacity:0.5 !important}
 
 @keyframes swing {
     0%   {top:0 }
