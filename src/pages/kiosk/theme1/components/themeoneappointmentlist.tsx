@@ -54,7 +54,7 @@ const ThemeOneAppointmentsList: React.FC = () => {
                                             <Row>
                                                 <Col sm="6">
                                                     <div className="appointment-property">
-                                                        <div className="appointment-value">{item.patientName}</div>
+                                                        <div className="appointment-value">{item.appointmentTime}</div>
                                                         <div className="appointment-key">{t('Kiosk.appointmentTime' + language)}</div>
                                                     </div>
                                                 </Col>
