@@ -6,7 +6,7 @@ import { interval } from "rxjs";
 import { ParentContext } from '../../Container/kioskcontext';
 import { getCurrentDateTimeRequest } from '../../../../store/actions';
 import { getDateTimeInterval } from '../../../../helpers/helpersIndex';
-import clientLogo from '../../../../images/aldaraLogo.png';
+import clientLogo from '../../../../images/vmcare-light.svg';
 let subscribe;
 
 const ThemeOneTopBar: React.FC = () => {
