@@ -17,6 +17,8 @@ export interface Settings {
     intervalCall;
     showMessageTime;
     dateTimeInterval;
+    readerUrl;
+    readerRetriveInterval;
 }
 
 export interface IApiUrls {

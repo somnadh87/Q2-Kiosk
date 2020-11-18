@@ -161,6 +161,22 @@ const kioskReducer = (state = initialState, action) => {
                 errorMessage: action.payload
             }
             break;
+        case types.GET_EMIRATES_ID_RESPONSE:
+            if (action.payload.errorMessage)
+                state = {
+                    ...state,
+                    emiratesData: undefinedData,
+                    mrnNo: undefinedData,
+                    errorMessage: action.payload.errorMessage
+                }
+            else
+                state = {
+                    ...state,
+                    emiratesData: action.payload.data,
+                    mrnNo: action.payload.mrnNo,
+                    errorMessage: ''
+                }
+            break;
         default:
             state = { ...state };
             break;

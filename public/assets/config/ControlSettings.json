@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://202.65.159.118:8092/",
+    "baseUrl": "http://202.65.159.118:4446/",
     "components": [
         {
             "apiUrl": "",
@@ -34,6 +34,17 @@
                     "name": "createFeedBack",
                     "type": "POST",
                     "url": "kiosk-flow/feedback"
+                }
+            ]
+        },
+        {
+            "apiUrl": "http://202.65.159.118:8092/",
+            "component": "Auth",
+            "methods": [
+                {
+                    "name": "getCurrentDate",
+                    "type": "GET",
+                    "url": "auth/1/current-date-time"
                 }
             ]
         }

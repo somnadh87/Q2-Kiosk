@@ -35,4 +35,11 @@ const getShowMessageTime = () => {
 const getDateTimeInterval = () => {
     return appsetting.dateTimeInterval;
 }
-export { getDateTimeInterval, getSessionReset, getShowMessageTime, setAppsetting, getAppsetting, setApiUrlsData, getApiServiceUrlByComponentAndMethod, getIntervalCall, gettranId }
+
+const getReaderRetriveInterval = () => {
+    return appsetting.readerRetriveInterval;
+}
+const getReaderUrl = () => {
+    return appsetting.readerUrl;
+}
+export { getReaderRetriveInterval, getReaderUrl, getDateTimeInterval, getSessionReset, getShowMessageTime, setAppsetting, getAppsetting, setApiUrlsData, getApiServiceUrlByComponentAndMethod, getIntervalCall, gettranId }

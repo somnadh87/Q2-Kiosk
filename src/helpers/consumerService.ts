@@ -310,3 +310,30 @@ export function serviceConsumerWithHeaders(ApiData: IApiMethod, body: any) {
 
 }
 
+export function serviceConsumerWithOutHeaders(url) {
+    return axios.get(url).then(response => {
+        if (response.status === 400 || response.status === 500)
+            throw response.data;
+        return response.data;
+    }).catch(err => {
+        if (err.response) {
+            // Request made and server responded
+            console.log("AxiosCatchSCresponse=>", err.response);
+            let response = err.response.data;
+            let apiThrowResponse = { status: false, statuscode: response.status, messages: response.messages ? response.messages : (response.message ? response.message : 'ServerError'), error: err } as IApiThrowResponse;
+            throw apiThrowResponse;
+        } else if (err.request) {
+            // The request was made but no response was received
+            console.log("AxiosCatchSCrequest=>", err);
+            let apiThrowResponse = { status: false, statuscode: 500, messages: 'ServerError', error: err } as IApiThrowResponse;
+            throw apiThrowResponse;
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("AxiosCatchSCelse", err);
+            let apiThrowResponse = { status: false, statuscode: 500, messages: 'ServerError', error: err } as IApiThrowResponse;
+            throw apiThrowResponse;
+        }
+    });
+}
+
+

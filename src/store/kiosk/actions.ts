@@ -158,5 +158,28 @@ export const getFeedbackResponse = (errorMsg) => {
 }
 
 
+export const getEmiratesIdRequest = (data) => {
+    return {
+        type: types.GET_EMIRATES_ID_REQUEST,
+        payload: data,
+        loadPayload: true,
+        loadingType: types.SET_LOADING,
+    }
+}
+export const getEmiratesIdResponse = (data, mrnNo, errorMessage) => {
+    if (!errorMessage)
+        return {
+            type: types.GET_EMIRATES_ID_RESPONSE,
+            payload: { data, mrnNo, errorMessage }
+        }
+    else
+        return {
+            type: types.GET_EMIRATES_ID_RESPONSE,
+            payload: { data, mrnNo, errorMessage },
+            loadPayload: false,
+            loadingType: types.SET_LOADING
+        }
+}
+
 
 

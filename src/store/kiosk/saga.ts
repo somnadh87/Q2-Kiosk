@@ -1,13 +1,15 @@
 import { all, fork, takeLatest, select, put, call, take, cancel } from "redux-saga/effects";
 import * as types from './actionTypes';
-import { gettranId, serviceConsumer, getApiServiceUrlByComponentAndMethod } from "../../helpers/helpersIndex";
+import { gettranId, serviceConsumer, serviceConsumerWithOutHeaders, getApiServiceUrlByComponentAndMethod, getReaderRetriveInterval, getReaderUrl } from "../../helpers/helpersIndex";
 import { IKioskModel, IMenus, IkioskManager, IAppointments, IKioskAppointmentDto } from "../../models/kioskModel";
 import * as actions from './actions';
 import { IMenuCodes, IAppoinmentCodes } from "models/utilitiesModel";
 import kiosk from "pages/kiosk/Container/kiosk";
 
+
 const KIOSKMODULE = 'QK1';
 const kioskComponent = "Kiosk";
+const authComponent = "Auth";
 
 function* getThemsAndMenusData(action) {
     let tranId = gettranId(KIOSKMODULE);
@@ -88,7 +90,7 @@ function* setKioskNameSelectionRequest(action) {
         //         selectedArea = IkioskManager.MENUSELECTION;
         //         break;
         // }
-        selectedArea = IkioskManager.MRNVERIFICATION;
+        selectedArea = IkioskManager.VERIFICATION;
         selectedMenu = action.payload.menuCode;
     }
     catch (error) {
@@ -288,7 +290,7 @@ function* getCurrentDateTimeRequest() {
     console.log(`${tranId}_getCurrentDateTimeRequest => `,);
     let dateTime;
     try {
-        let checkinComponentAndMethod = getApiServiceUrlByComponentAndMethod(kioskComponent, 'getCurrentDate');
+        let checkinComponentAndMethod = getApiServiceUrlByComponentAndMethod(authComponent, 'getCurrentDate');
         console.log(`${tranId}_getCurrentDateTimeRequest_Api_Request => `, checkinComponentAndMethod);
         const response = yield call(serviceConsumer, tranId, checkinComponentAndMethod, null, null);
         console.log(`${tranId}_getCurrentDateTimeRequest_Api_Response => `, response);
@@ -335,6 +337,46 @@ function* getFeedbackRequest(action) {
     yield put(actions.getFeedbackResponse(errorMessage));
 }
 
+function* getEmiratesIdRequest(action) {
+    let tranId = gettranId(KIOSKMODULE);
+    console.log(`${tranId}_getEmiratesIdRequest_Start => `, action);
+    let errorMessage: string | undefined;
+    let emiratesData;
+    let mrnNo;
+    let url = getReaderUrl();
+    let i = 0;
+    let loopInterval = getReaderRetriveInterval() ? getReaderRetriveInterval() : 3;
+    while (i < loopInterval) {
+        errorMessage = undefined;
+        try {
+            console.log(`${tranId}_getEmiratesIdRequest_Api_Request => `, i);
+            const response = yield call(serviceConsumerWithOutHeaders, url);
+            console.log(`${tranId}_getEmiratesIdRequest_Api_Response => `, response);
+            if (response?.status) {
+                i = loopInterval;
+                emiratesData = response;
+                mrnNo = response.emratesId;
+            }
+            else
+                i++;
+        } catch (error) {
+            console.error(`${tranId}_getEmiratesIdRequest_error => `, error);
+            console.log(`${tranId}_getEmiratesIdRequest_catch => `, error);
+            i++;
+            errorMessage = 'EM0';
+        }
+
+    }
+    console.log(`${tranId}_getEmiratesIdRequest_End => `, emiratesData, mrnNo, errorMessage);
+    yield put(actions.getEmiratesIdResponse(emiratesData, mrnNo, errorMessage));
+    if (!errorMessage && mrnNo)
+        yield put(actions.mrnSubmitRequest(mrnNo));
+
+
+}
+
+
+
 function* kioskWatcher() {
     while (true) {
         const tl1 = yield takeLatest(types.SET_KIOSK_ID_AND_GET_MENUS_DATA_REQUEST, getThemsAndMenusData);
@@ -345,8 +387,11 @@ function* kioskWatcher() {
         const tl6 = yield takeLatest(types.APPOINTMENT_CHECKEIN_REQUEST, appointmentsCheckinRequest);
         const tl7 = yield takeLatest(types.GET_CURRENT_DATE_TIME_REQUEST, getCurrentDateTimeRequest);
         const tl8 = yield takeLatest(types.GET_FEEDBACK_REQUEST, getFeedbackRequest);
+
+        const tl9 = yield takeLatest(types.GET_EMIRATES_ID_REQUEST, getEmiratesIdRequest);
+
         yield take(types.EXIT_ACTION);
-        yield cancel([tl1, tl2, tl3, tl4, tl5, tl6, tl7, tl8]);
+        yield cancel([tl1, tl2, tl3, tl4, tl5, tl6, tl7, tl8, tl9]);
     }
 }
 

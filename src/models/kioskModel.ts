@@ -12,6 +12,7 @@ export interface IKioskModel {
     appointmentsData: IKioskAppointmentDto[],
     mrnNo: string;
     dateTime: string;
+    emiratesData: any;
 }
 
 export interface ITemplateData {
