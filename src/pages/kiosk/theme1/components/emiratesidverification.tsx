@@ -19,7 +19,7 @@ const EmiratesIdVerification: React.FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            dispatch(getEmiratesIdRequest('')); // pass emiratedId 
+            dispatch(getEmiratesIdRequest());
         }, 5000);
     }, []);
 

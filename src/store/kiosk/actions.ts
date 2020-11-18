@@ -158,10 +158,9 @@ export const getFeedbackResponse = (errorMsg) => {
 }
 
 
-export const getEmiratesIdRequest = (data) => {
+export const getEmiratesIdRequest = () => {
     return {
         type: types.GET_EMIRATES_ID_REQUEST,
-        payload: data,
         loadPayload: true,
         loadingType: types.SET_LOADING,
     }
