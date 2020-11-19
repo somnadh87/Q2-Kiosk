@@ -365,14 +365,11 @@ function* getEmiratesIdRequest(action) {
             i++;
             errorMessage = 'EM0';
         }
-
     }
     console.log(`${tranId}_getEmiratesIdRequest_End => `, emiratesData, mrnNo, errorMessage);
     yield put(actions.getEmiratesIdResponse(emiratesData, mrnNo, errorMessage));
     if (!errorMessage && mrnNo)
         yield put(actions.mrnSubmitRequest(mrnNo));
-
-
 }
 
 
