@@ -61,13 +61,13 @@ const ThemeOneMenus: React.FC = () => {
                                     {index === 3 && <div className="kiosk-menuItem" onClick={() => { dispatch(menuSelectionRequest(menu)) }}>
                                         <div className="menuitem-title">{menu.menuName}</div>
                                         {/* <img src={laboratory} alt="" width="55%" /> */}
-                                        <img src={feedbackImg} width="50%" alt="" />
+                                        <img src={appointment} width="50%" alt="" />
 
                                     </div>}
                                     {index === 4 && <div className="kiosk-menuItem" onClick={() => { dispatch(menuSelectionRequest(menu)) }}>
                                         <div className="menuitem-title">{menu.menuName}</div>
                                         {/* <img src={feedbackImg} width="50%" alt="" /> */}
-                                        <img src={appointment} alt="" width="55%" />
+                                        <img src={feedbackImg} alt="" width="50%" />
                                     </div>}
                                 </React.Fragment>
                             )
