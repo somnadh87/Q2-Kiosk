@@ -21,7 +21,7 @@
 .languagebtn{border: 2px solid #ffffff;  background: transparent; font-size:18px; font-weight:500; padding:10px; margin-right: 25px; width: 150px; height:135px; border-radius: 4px; color:#ffffff}
 .languagebtn:first-child{background:#fcf0e3; color: #1F2350; border: none}
 .kiosk-content .welcometext{color:#ffffff; display: flex; justify-content: center; align-items: center;}
-.homemenu-sec{max-width:37%;}
+.homemenu-sec{max-width:542px;}
 .homemenu-sec h2{text-align: left;width: 100%; font-size: 38px;}
 .kiosk-menuItem{width: 160px;height: 160px; text-align:center; color: #ffffff; float: left; font-size: 20px; font-weight: 500; margin-bottom: 20px; padding: 10px 20px; cursor: pointer;
     margin-right: 20px; box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);background-image: linear-gradient(to bottom, #5d62b5 2%, #41458d); overflow: hidden; position: relative; }
@@ -159,20 +159,20 @@
   }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .homemenu-sec{max-width:55%;}
+  /* .homemenu-sec{max-width:55%;} */
   .frmInput{width: 90%;}
 }
 
 @media (min-width: 1025px) and (max-width: 1366px) {
-    .homemenu-sec{max-width:41%;}
+    /* .homemenu-sec{max-width:41%;} */
 }
 
 @media screen and (width: 768px) {
-    .homemenu-sec{max-width:75%;}
+    /* .homemenu-sec{max-width:75%;} */
 }
 
 @media (max-width: 767px) {
-    .homemenu-sec{max-width:100%;}
+    /* .homemenu-sec{max-width:100%;} */
     .kiosk-menuItem{width: 147px; height: 130px}
     .frmInput{width: 100%;}
 }
